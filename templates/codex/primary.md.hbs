@@ -1,0 +1,12 @@
+{{> shared_team_header}}
+
+## ⚙️ Guía de Ejecución para Codex CLI
+
+- Las habilidades activables del equipo están en `.codex/skills/`
+- Podés invocar cualquier rol activando su habilidad correspondiente o pidiéndoselo explícitamente al orquestador.
+
+---
+
+{{#each agents}}
+{{> shared_agent_section agent=this stack=../stack stackRules=this.resolvedStackRules}}
+{{/each}}

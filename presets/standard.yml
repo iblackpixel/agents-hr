@@ -1,0 +1,11 @@
+id: standard
+name: "Equipo Estándar"
+description: "Equipo equilibrado para la mayoría de los proyectos de desarrollo móvil o web (6-8 agentes)."
+agents:
+  - tech-lead
+  - frontend-dev
+  - backend-dev
+  - qa-engineer
+  - devops
+  - product-manager
+  - tech-writer

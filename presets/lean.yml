@@ -1,0 +1,7 @@
+id: lean
+name: "Equipo Liviano (Lean)"
+description: "Equipo mínimo ideal para MVP, prototipos o startups (3-4 agentes)."
+agents:
+  - tech-lead
+  - fullstack-dev
+  - qa-engineer

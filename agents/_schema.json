@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AgentProfile",
+  "type": "object",
+  "required": ["id", "name", "emoji", "category", "description", "system_prompt"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "emoji": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["tech", "product", "comms", "specialist"]
+    },
+    "description": {
+      "type": "string"
+    },
+    "auto_include": {
+      "type": "object",
+      "properties": {
+        "architectures": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "stacks": {
+          "oneOf": [
+            { "type": "string", "enum": ["all"] },
+            { "type": "array", "items": { "type": "string" } }
+          ]
+        }
+      }
+    },
+    "system_prompt": {
+      "type": "string"
+    },
+    "stack_rules": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "collaborates_with": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  }
+}

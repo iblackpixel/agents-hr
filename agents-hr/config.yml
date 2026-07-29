@@ -1,0 +1,30 @@
+# Agents-HR Team Configuration
+# Generado manualmente (dogfooding) - Este es el equipo que construye agents-hr
+version: 1
+generated_at: "2026-07-28T16:40:00-03:00"
+
+platform:
+  primary: antigravity
+  secondary: [claude, codex]
+
+stack: typescript-cli
+architecture: standard
+
+# Integración con Linear para tracking de producto
+integrations:
+  linear:
+    enabled: true
+    team_prefix: AHR
+    epic_issue_id: AHR-1
+    epic_url: "https://linear.app/nail-library/issue/AHR-1/epic-agents-hr-cli-de-agencia-de-rrhh-para-agentes-ai"
+
+team:
+  # Técnicos
+  - tech-lead
+  - developer
+  - qa-engineer
+  # Producto
+  - product-manager
+  - scrum-master
+  # Comunicación
+  - tech-writer

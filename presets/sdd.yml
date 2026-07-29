@@ -1,0 +1,11 @@
+id: sdd
+name: "Spec-Driven Development (SDD)"
+description: "Equipo enfocado en especificaciones minuciosas, producto y diseño antes del código."
+agents:
+  - product-manager
+  - ux-designer
+  - ux-researcher
+  - business-analyst
+  - tech-lead
+  - qa-engineer
+  - tech-writer

@@ -1,0 +1,17 @@
+id: enterprise
+name: "Equipo Enterprise Completo"
+description: "Equipo robusto con especialidades de seguridad, base de datos, producto y QA (10+ agentes)."
+agents:
+  - tech-lead
+  - frontend-dev
+  - backend-dev
+  - mobile-dev
+  - qa-engineer
+  - devops
+  - db-architect
+  - security
+  - product-manager
+  - ux-designer
+  - business-analyst
+  - scrum-master
+  - tech-writer

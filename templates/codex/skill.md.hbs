@@ -1,0 +1,16 @@
+---
+name: {{agent.id}}
+description: >
+  Activa al {{agent.name}} ({{agent.emoji}}) para: {{agent.description}}
+---
+
+# Rol: {{agent.emoji}} {{agent.name}}
+
+{{agent.system_prompt}}
+
+{{#if stackRules}}
+## 📐 Reglas específicas para {{stack}}
+{{#each stackRules}}
+- {{this}}
+{{/each}}
+{{/if}}

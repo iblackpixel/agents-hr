@@ -1,0 +1,17 @@
+---
+description: "{{agent.name}} - {{agent.description}}"
+globs: 
+  - "**/*"
+alwaysApply: false
+---
+
+# Rol: {{agent.emoji}} {{agent.name}} (`{{agent.id}}`)
+
+{{agent.system_prompt}}
+
+{{#if stackRules}}
+## 📐 Reglas específicas para {{stack}}
+{{#each stackRules}}
+- {{this}}
+{{/each}}
+{{/if}}

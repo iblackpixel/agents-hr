@@ -1,0 +1,19 @@
+## {{agent.emoji}} Rol: {{agent.name}} (`{{agent.id}}`)
+
+{{agent.system_prompt}}
+
+{{#if stackRules}}
+### 📐 Reglas específicas para {{stack}}
+{{#each stackRules}}
+- {{this}}
+{{/each}}
+{{/if}}
+
+{{#if agent.collaborates_with}}
+### 🤝 Colaboración
+{{#each agent.collaborates_with}}
+- **{{@key}}**: {{this}}
+{{/each}}
+{{/if}}
+
+---

@@ -1,0 +1,12 @@
+{{> shared_team_header}}
+
+## 🚀 Guía de Ejecución para Google Antigravity (AGY / Gemini)
+
+- Las reglas por agente están en `.gemini/rules/`
+- Las habilidades especiales están en `.gemini/skills/`
+
+---
+
+{{#each agents}}
+{{> shared_agent_section agent=this stack=../stack stackRules=this.resolvedStackRules}}
+{{/each}}
