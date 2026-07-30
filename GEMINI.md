@@ -21,6 +21,14 @@
 
 ---
 
+## ⚡ Regla de Oro del Equipo (Planificación y Propuesta Previa)
+
+> [!IMPORTANT]
+> **SIEMPRE PROPONER ANTES DE IMPLEMENTAR**:
+> Antes de realizar modificaciones directas en el código, crear nuevos archivos o ejecutar refactorizaciones complejas:
+> 1. **Presentar una propuesta clara**: Diagnóstico del problema, estrategia planteada y lista de archivos a modificar.
+> 2. **Esperar la aprobación**: Obtener la confirmación o retroalimentación del usuario antes de proceder a la fase de escritura de código.
+
 ## 📐 Convenciones Globales del Proyecto
 
 - **Single Source of Truth**: Este documento define la composición del equipo y convenciones generales.
