@@ -1,13 +1,13 @@
 # 🏢 Equipo de Agentes AI — {{projectName}}
 
-> Generado por **agents-hr** (Agencia de RRHH para Agentes AI)
-> Fecha: {{generatedAt}}
-> Stack: **{{stack}}** | Arquitectura: **{{architecture}}**
+> Generado por **agents-hr** | Stack: **{{stack}}** | Arquitectura: **{{architecture}}**
 
 ## 📋 Integrantes del Equipo
 
+| Emoji | Rol | ID | Descripción | Reglas / Skill |
+|---|---|---|---|---|
 {{#each team}}
-- {{this.emoji}} **{{this.name}}** (`{{this.id}}`) — {{this.description}}
+| {{this.emoji}} | **{{this.name}}** | `{{this.id}}` | {{this.description}} | `rules/{{this.id}}.md` |
 {{/each}}
 
 ---

@@ -27,6 +27,12 @@ export async function initCommand(options: { dryRun?: boolean; targetDir?: strin
     console.log(`  ${a.emoji}  ${a.name} (${a.id}) ${a.isCustom ? '[CUSTOM]' : ''}`);
   });
 
+  if (answers.architecture === 'lean' && resolvedAgents.length > 5) {
+    logger.warning(
+      `⚠️ Has seleccionado ${resolvedAgents.length} agentes para un proyecto MVP/Lean. Recomendamos reducir el equipo a 3-5 agentes para ahorrar tokens de contexto.`
+    );
+  }
+
   console.log(`\n📦 Plataforma Principal: ${PLATFORM_NAMES[answers.primaryPlatform]}`);
   if (answers.secondaryPlatforms.length > 0) {
     console.log(

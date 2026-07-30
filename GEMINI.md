@@ -1,68 +1,28 @@
-# 🏢 Agents-HR — Agencia de RRHH para Agentes AI
+# 🏢 Equipo de Agentes AI — agents-hr
 
-## Proyecto
+> Generado por **agents-hr** | Stack: **typescript-cli** | Arquitectura: **standard**
 
-Agents-HR es un CLI interactivo (TypeScript/Node.js) que funciona como una agencia de recursos humanos de agentes AI para proyectos de software móvil y web. Contiene un catálogo de 22+ perfiles de agentes (técnicos, producto, comunicación, especializados) y genera la arquitectura agéntica necesaria según la plataforma, stack y complejidad elegidos.
+## 📋 Integrantes del Equipo
 
-## Stack Tecnológico
+| Emoji | Rol | ID | Descripción | Reglas / Skill |
+|---|---|---|---|---|
+| 🚀 | **DevOps Engineer** | `devops` | Ingeniero de infraestructura, automatización CI/CD, contenedorización, monitoreo, despliegues sin interrupciones y nube.
+ | `rules/devops.md` |
+| 🧪 | **QA Engineer** | `qa-engineer` | Especialista en garantía de calidad, automatización de pruebas (Unit, Integration, E2E), detección de bugs y prevención de regresiones.
+ | `rules/qa-engineer.md` |
+| 🏗️ | **Tech Lead** | `tech-lead` | Arquitecto principal del proyecto. Toma decisiones técnicas, define estándares de código, revisa PRs y mentora al equipo.
+ | `rules/tech-lead.md` |
+| 🏃 | **Scrum Master** | `scrum-master` | Facilitador de metodologías ágiles, eliminación de impedimentos, optimización de la velocidad del equipo y gestión de herramientas (Linear, Jira).
+ | `rules/scrum-master.md` |
+| 📝 | **Technical Writer** | `tech-writer` | Redactor técnico especializado en documentación de arquitecturas, READMEs claros, manuales de API, guías de contribución y JSDoc/TSDoc.
+ | `rules/tech-writer.md` |
+| 📋 | **Product Manager** | `product-manager` | Líder de producto responsable de la visión, estrategia, definición del backlog, historias de usuario, especificaciones (SDD) y priorización.
+ | `rules/product-manager.md` |
 
-- **Lenguaje:** TypeScript (ES2022, módulos ESM)
-- **Runtime:** Node.js 20+
-- **CLI Framework:** Commander.js
-- **Prompts:** Inquirer.js
-- **Templates:** Handlebars (.hbs)
-- **YAML parsing:** js-yaml
-- **Terminal UI:** Chalk + ora
-- **Filesystem:** fs-extra
-- **Testing:** Vitest
+---
 
-## Arquitectura
+## 📐 Convenciones Globales del Proyecto
 
-```
-src/                → Código fuente TypeScript
-  cli/              → Comandos del CLI (init, list, add, remove, sync, team)
-  generators/       → Generadores por plataforma (claude, codex, antigravity, opencode, reference)
-  profiles/         → Registry, resolver, custom-loader, types
-  utils/            → fs, markdown, logger, constants
-agents/             → Catálogo de perfiles de agentes (YAML)
-templates/          → Templates Handlebars por plataforma
-presets/            → Equipos predefinidos (lean, standard, enterprise, sdd)
-bin/                → Entry point del CLI
-tests/              → Tests con Vitest
-```
-
-## Convenciones de Código
-
-- **Nombrado:** camelCase para variables/funciones, PascalCase para tipos/interfaces, kebab-case para archivos
-- **Exports:** Named exports, no default exports
-- **Async:** Usar async/await, nunca .then() chains
-- **Errores:** Custom error classes que extiendan Error
-- **Imports:** Imports absolutos desde src/, usar path aliases si se configura
-- **Tipos:** Tipos explícitos para parámetros de función y retornos. Usar `interface` para objetos, `type` para uniones/intersecciones
-- **Documentación:** JSDoc en funciones y clases públicas
-
-## Principios de Diseño
-
-1. **Single Source of Truth**: Los perfiles YAML son la fuente de verdad. Los generadores leen YAML y producen archivos de plataforma.
-2. **Plataforma Primaria + Referencias**: La plataforma principal genera contenido completo. Las secundarias solo referencian a la principal.
-3. **Extensibilidad**: El usuario puede crear perfiles custom en `agents-hr/custom/` dentro de su proyecto.
-4. **Idempotencia**: Ejecutar `sync` múltiples veces produce el mismo resultado.
-5. **Dry-run**: Todo comando destructivo soporta `--dry-run`.
-
-## Plataformas Soportadas
-
-| Plataforma | Archivo principal | Archivos por agente | Extra |
-|---|---|---|---|
-| Claude | CLAUDE.md | .claude/rules/{id}.md | @import para refs |
-| Codex | AGENTS.md | .codex/skills/{id}/SKILL.md | Skills activables |
-| Antigravity | GEMINI.md | .gemini/rules/{id}.md | Settings JSON |
-| Open Code | AGENTS.md | .ai/agents/{id}.md | .cursorrules |
-
-## Comandos Importantes
-
-```bash
-npm run build       # Compila TypeScript → dist/
-npm run dev         # Ejecuta con ts-node en modo watch
-npm test            # Corre tests con Vitest
-node bin/agents-hr  # Ejecuta el CLI
-```
+- **Single Source of Truth**: Este documento define la composición del equipo y convenciones generales.
+- **Reglas Modulares**: Las instrucciones detalladas de cada rol se cargan dinámicamente desde `.gemini/rules/{id}.md`.
+- **Estilo de Código**: Priorizar código limpio, modular, tipado estrictamente (TypeScript) y sin duplicaciones.

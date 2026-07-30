@@ -2,12 +2,6 @@
 
 ## 🧠 Guía de Ejecución para Claude Code
 
-- Las reglas modulares por agente están disponibles en `.claude/rules/`
-- Los subagentes nativos están definidos en `.claude/agents/`
-- Podés invocar agentes especializados automáticamente o indicándoles la tarea correspondiente.
-
----
-
-{{#each agents}}
-{{> shared_agent_section agent=this stack=../stack stackRules=this.resolvedStackRules}}
-{{/each}}
+- **Subagentes Nativos**: Definidos en `.claude/agents/{id}.md`.
+- **Reglas Modulares**: Disponibles en `.claude/rules/{id}.md`.
+- Usar subagentes para tareas específicas para mantener el contexto limpio.

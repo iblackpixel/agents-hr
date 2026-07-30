@@ -1,12 +1,7 @@
 {{> shared_team_header}}
 
-## 🚀 Guía de Ejecución para Google Antigravity (AGY / Gemini)
+## 📐 Convenciones Globales del Proyecto
 
-- Las reglas por agente están en `.gemini/rules/`
-- Las habilidades especiales están en `.gemini/skills/`
-
----
-
-{{#each agents}}
-{{> shared_agent_section agent=this stack=../stack stackRules=this.resolvedStackRules}}
-{{/each}}
+- **Single Source of Truth**: Este documento define la composición del equipo y convenciones generales.
+- **Reglas Modulares**: Las instrucciones detalladas de cada rol se cargan dinámicamente desde `.gemini/rules/{id}.md`.
+- **Estilo de Código**: Priorizar código limpio, modular, tipado estrictamente (TypeScript) y sin duplicaciones.
