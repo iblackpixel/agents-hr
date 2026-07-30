@@ -5,6 +5,8 @@ import { addCommand } from './cli/add.js';
 import { removeCommand } from './cli/remove.js';
 import { syncCommand } from './cli/sync.js';
 import { teamCommand } from './cli/team.js';
+import { cleanCommand } from './cli/clean.js';
+import { resetCommand } from './cli/reset.js';
 
 export async function runCli(): Promise<void> {
   const program = new Command();
@@ -49,6 +51,21 @@ export async function runCli(): Promise<void> {
     .command('team')
     .description('Ver la lista de agentes del equipo configurado en el proyecto')
     .action(() => teamCommand());
+
+  program
+    .command('clean')
+    .description('Eliminar la estructura agéntica del proyecto actual para empezar de cero')
+    .option('-f, --force', 'Saltar la confirmación interactiva')
+    .option('--keep-custom', 'Preservar los agentes definidos en agents-hr/custom/')
+    .option('--dry-run', 'Simular los archivos a borrar sin modificar el disco')
+    .action((options) => cleanCommand({ force: options.force, keepCustom: options.keepCustom, dryRun: options.dryRun }));
+
+  program
+    .command('reset')
+    .description('Limpiar la estructura agéntica actual y ejecutar init de nuevo en un solo paso')
+    .option('-f, --force', 'Saltar la confirmación interactiva de limpieza')
+    .option('--keep-custom', 'Preservar los agentes definidos en agents-hr/custom/')
+    .action((options) => resetCommand({ force: options.force, keepCustom: options.keepCustom }));
 
   await program.parseAsync(process.argv);
 }

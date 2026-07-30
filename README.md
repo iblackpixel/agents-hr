@@ -247,6 +247,15 @@ agents-hr sync
 
 # 🏢 Inspeccionar el equipo instalado en la carpeta actual
 agents-hr team
+
+# 🧹 Limpiar la estructura agéntica del proyecto actual para empezar de cero
+agents-hr clean
+agents-hr clean --keep-custom   # Preserva carpeta agents-hr/custom/
+agents-hr clean --dry-run       # Simula los archivos a eliminar sin tocar disco
+agents-hr clean -f              # Salta la confirmación interactiva
+
+# 🔄 Reiniciar la arquitectura agéntica e iniciar init en 1 solo paso
+agents-hr reset
 ```
 
 ---
