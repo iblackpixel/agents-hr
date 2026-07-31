@@ -256,6 +256,10 @@ agents-hr clean -f              # Salta la confirmación interactiva
 
 # 🔄 Reiniciar la arquitectura agéntica e iniciar init en 1 solo paso
 agents-hr reset
+
+# 🔍 Auditar y actualizar los perfiles del proyecto con las últimas tendencias de mercado
+agents-hr update --audit        # Genera informe de auditoría sin modificar archivos
+agents-hr update                # Sincroniza el equipo actual con las reglas más recientes
 ```
 
 ---

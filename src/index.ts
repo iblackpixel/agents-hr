@@ -7,6 +7,7 @@ import { syncCommand } from './cli/sync.js';
 import { teamCommand } from './cli/team.js';
 import { cleanCommand } from './cli/clean.js';
 import { resetCommand } from './cli/reset.js';
+import { updateCommand } from './cli/update.js';
 
 export async function runCli(): Promise<void> {
   const program = new Command();
@@ -66,6 +67,13 @@ export async function runCli(): Promise<void> {
     .option('-f, --force', 'Saltar la confirmación interactiva de limpieza')
     .option('--keep-custom', 'Preservar los agentes definidos en agents-hr/custom/')
     .action((options) => resetCommand({ force: options.force, keepCustom: options.keepCustom }));
+
+  program
+    .command('update')
+    .description('Auditar y actualizar los perfiles agénticos con las tendencias más recientes del mercado')
+    .option('-a, --audit', 'Solo realizar una auditoría de recomendaciones sin modificar nada')
+    .option('--dry-run', 'Simular cambios sin escribir en disco')
+    .action((options) => updateCommand({ audit: options.audit, dryRun: options.dryRun }));
 
   await program.parseAsync(process.argv);
 }
