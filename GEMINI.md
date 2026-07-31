@@ -18,6 +18,8 @@
  | `rules/tech-writer.md` |
 | 📋 | **Product Manager** | `product-manager` | Líder de producto responsable de la visión, estrategia, definición del backlog, historias de usuario, especificaciones (SDD) y priorización.
  | `rules/product-manager.md` |
+| 🔄 | **Profile &amp; Agentic Trends Auditor** | `profile-updater` | Auditor especializado en investigar tendencias agénticas, actualizaciones de frameworks y proponer optimizaciones continuas a las reglas y habilidades del equipo.
+ | `rules/profile-updater.md` |
 
 ---
 

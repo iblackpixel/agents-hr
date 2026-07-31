@@ -1,5 +1,5 @@
 version: 1
-generated_at: '2026-07-30T02:51:35.343Z'
+generated_at: '2026-07-31T01:20:33.943Z'
 platform:
   primary: antigravity
   secondary:
@@ -21,3 +21,4 @@ team:
   - product-manager
   - scrum-master
   - tech-writer
+  - profile-updater
